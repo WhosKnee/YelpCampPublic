@@ -65,7 +65,7 @@ app.use(express.static(__dirname + "/public"))
 // local database
 // mongoose.connect('mongodb://localhost:27017/yelp_camp_v12', { useNewUrlParser: true }); 
 
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp_v12";
+var url = "mongodb+srv://husni:Gifted99@cluster0-tukk9.mongodb.net/test?retryWrites=true";
 mongoose.connect(url,{ useNewUrlParser: true });
 
 // line for body parser
@@ -84,6 +84,13 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The YelpCamp Server has Started");
 })
+
+/*
+app.listen(3000, function(){
+    console.log("YelpCamp up")
+});
+*/

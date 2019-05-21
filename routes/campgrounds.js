@@ -53,7 +53,6 @@ router.get("/:id", function(req, res){
             console.log(err);
         }
         else{
-            console.log(foundCampground.comments);
             // render the template for the campground with the
             // Campground as a parameter
             res.render("campgrounds/show", {campground: foundCampground});

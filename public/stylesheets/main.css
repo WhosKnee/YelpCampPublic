@@ -10,6 +10,7 @@
 .btn-success {
     background-color: #c9d89e;
     color: black;
+    border: none;
 }
 
 .btm-success:hover {

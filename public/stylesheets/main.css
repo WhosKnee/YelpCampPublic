@@ -7,6 +7,15 @@
     background-color: #c9d89e;
 }
 
+.btn-green {
+    background-color: #c9d89e;
+    color: black;
+}
+
+.btn-green:hover {
+    background-color: #ffffff;
+}
+
 .block {
     display: block;
 }

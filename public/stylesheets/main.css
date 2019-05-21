@@ -1,0 +1,64 @@
+.loginColor{
+    background-color: #f4f0cb;
+    animation: bgColorTransition 5s infinite linear;
+}
+
+.jumbotron {
+    background-color: #c9d89e;
+}
+
+.block {
+    display: block;
+}
+
+input {
+    margin-bottom: 3%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 11px;
+}
+
+.commentFloat {
+    float: right;
+    margin-left: 5px;
+}
+
+.inline {
+    float: right;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.login {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    background-color: white;
+    padding: 20px;
+    padding-right: 300px;
+    border-radius: 15px;
+    opacity: 0.9;
+}
+
+.field {
+    opacity: 0.5;
+}
+
+@keyframes bgColorTransition {
+    0%   {background-color: #f4f0cb;}
+    25%  {background-color: #ded29e;}
+    50%  {background-color: #b3a580;}
+    75%  {background-color: #B7c68b;}
+    100% {background-color: #f4f0cb;}
+  }

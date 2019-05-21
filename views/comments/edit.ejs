@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Edit comment</h1>
+        <div style="width: 30%; margin: 20px auto;">
+            <!--The action /campgrounds will more or less run the post request to /campgrounds
+                this is the page which does the logic which we require-->
+            <form action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment[text]"  value="<%=comment.text%>">
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+                
+            </form>
+            
+            <a href="/campgrounds" style="text-align: center;">Go back to campgrounds</a>
+        </div>
+    </div>
+</div>

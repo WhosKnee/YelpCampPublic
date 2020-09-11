@@ -19,15 +19,6 @@ var Comment = require("./models/comment.js");
 
 var methodOverride = require("method-override");
 app.use(methodOverride("_method"));
-/*
-var user = require("./models/user.js");
-*/
-
-// get the seed file
-// var seedDB = require("./seeds");
-
-// run the seed file to reset the enviroment
-// seedDB();
 
 // line to use connect flash
 app.use(flash());
@@ -59,23 +50,15 @@ app.use(function(req, res, next){
 // get stylesheets, where __direname is up to /V10
 app.use(express.static(__dirname + "/public"))
 
-// mongodb atlas
-//mongoose.connect('mongodb+srv://husni:Gifted99@cluster0-tukk9.mongodb.net/test?retryWrites=true', { useNewUrlParser: true }); 
-
 // local database
-// mongoose.connect('mongodb://localhost:27017/yelp_camp_v12', { useNewUrlParser: true }); 
+mongoose.connect('mongodb://localhost:27017/yelp_camp_v12', { useNewUrlParser: true }); 
 
-var url = "mongodb+srv://husni:Gifted99@cluster0-tukk9.mongodb.net/test?retryWrites=true";
-mongoose.connect(url,{ useNewUrlParser: true });
 
 // line for body parser
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-
 // allows for us to render ejs pages.
 app.set("view engine", "ejs");
-
 
 // for app.js to use routes
 app.use(indexRoutes);
@@ -85,12 +68,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("The YelpCamp Server has Started");
-})
-
-/*
 app.listen(3000, function(){
     console.log("YelpCamp up")
 });
-*/
